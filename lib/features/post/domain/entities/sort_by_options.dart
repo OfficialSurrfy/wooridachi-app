@@ -1,0 +1,4 @@
+enum PostSortByOptions {
+  mostLiked,
+  mostRecent,
+}

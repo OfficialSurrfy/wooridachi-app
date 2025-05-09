@@ -1,0 +1,80 @@
+rules_version = '2';
+
+service cloud.firestore {
+    match /databases/{database}/documents {
+
+        function userAndAdmin() {
+            return (request.auth != null && request.auth.token.email == resource.data.email)           
+            //   || get(/databases/$(database)/documents/users/$(request.auth.email)).data.role == 'Admin';
+        }
+
+        function onlyAdmin() {
+            //   return get(/databases/$(database)/documents/users/$(request.auth.email)).data.uid == 'Admin';
+            return true;
+        }
+
+        match /Trending%20Posts/{document=**} {
+      allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Global%20Posts/{document=**} {
+            allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Comments/{document=**} {
+            allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Replies/{document=**} {
+             allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Reports/{document=**} {
+           allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /users/{document=**} {
+            allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /chat_rooms/{document=**} {
+            allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Bookmarks/{document=**} {
+            allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+
+        match /Likes/{document=**} {
+           allow read;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null
+                && request.resource.data.email == request.auth.token.email;
+        }
+    }
+}
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "543538833581",
+    "project_id": "new-surrfy",
+    "storage_bucket": "new-surrfy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543538833581:android:f3546e2293b2513af33e24",
+        "android_client_info": {
+          "package_name": "com.example.new_surrfy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL5yC3MAhLIYAqlHHIyQ9obVRThD1jQ-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543538833581:android:a1f54984e493e39ef33e24",
+        "android_client_info": {
+          "package_name": "com.example.uridachi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL5yC3MAhLIYAqlHHIyQ9obVRThD1jQ-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

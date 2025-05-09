@@ -1,0 +1,29 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "new-surrfy",
+          "appId": "1:543538833581:android:a1f54984e493e39ef33e24",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "new-surrfy",
+          "configurations": {
+            "android": "1:543538833581:android:a1f54984e493e39ef33e24",
+            "ios": "1:543538833581:ios:06504acf8029fcd0f33e24"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
